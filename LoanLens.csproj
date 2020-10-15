@@ -82,6 +82,7 @@
     <Content Include="images\favicon.png" />
     <Content Include="images\footer-bg.svg" />
     <Content Include="images\header-bg.svg" />
+    <Content Include="images\icons8-monocle-50.png" />
     <Content Include="images\loader.svg" />
     <Content Include="images\LoanLens-PixTeller.png" />
     <Content Include="images\logo-white.png" />
