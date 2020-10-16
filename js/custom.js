@@ -60,20 +60,9 @@ $(function () {
     $("#amount").on("change", function () {
         slider.slider("value", this.value + 1);
     });
-    //
-    var slider = $("#slider-interest").slider({
-        range: "min",
-        value: 10.5,
-        min: 6.5,
-        max: 20,
-        slide: function (event, ui) {
-            $("#interest").val(ui.value);
-        }
-    });
-    $("#interest").on("change", function () {
-        slider.slider("value", this.value + 0.5);
-    });
-    //
+});
+
+$(function () {
     var slider = $("#slider-tenure").slider({
         range: "min",
         value: 36,
@@ -85,6 +74,21 @@ $(function () {
     });
     $("#tenure").on("change", function () {
         slider.slider("value", this.value + 3);
+    });
+});
+
+$(function () {
+    var slider = $("#slider-interest").slider({
+        range: "min",
+        value: 10.5,
+        min: 6.5,
+        max: 20,
+        slide: function (event, ui) {
+            $("#interest").val(ui.value);
+        }
+    });
+    $("#interest").on("change", function () {
+        slider.slider("value", this.value + 0.5);
     });
 });
 
