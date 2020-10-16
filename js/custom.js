@@ -50,7 +50,7 @@ $(function () {
     ------------------------------------------------------------------*/
     var slider = $("#slider").slider({
         range: "min",
-        value: 100000,
+        value: 200000,
         min: 1000,
         max: 700000,
         slide: function (event, ui) {
@@ -65,7 +65,7 @@ $(function () {
 $(function () {
     var slider = $("#slider-tenure").slider({
         range: "min",
-        value: 36,
+        value: 12,
         min: 12,
         max: 360,
         slide: function (event, ui) {
