@@ -10,10 +10,8 @@ p{
     color: black;
 }
 
-table, th, td{
-    background-color: #cdfaae;
-    
-    
+table {
+    background-color: #cdfaae, #a0d874, #66ba6b, #579f5c, #396d3d, #315736;
 }
 
 .my-custom-scrollbar {
