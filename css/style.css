@@ -158,8 +158,8 @@ section {
 /* ======= Header =========*/
 .navbar {
 	background-color: transparent;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	-webkit-transition: all 500ms linear;
 	-o-transition: all 500ms linear;
 	transition: all 500ms linear;
@@ -311,7 +311,7 @@ html .ui-button.ui-state-disabled:active {
 
 /*==== calculator ======*/
 .calculator-section{
-	padding: 100px 0;
+	padding: 120px 0;
 	background-color: rgba(0,0,0,0.035);
 }
 .form-calculator{
