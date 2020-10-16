@@ -1,9 +1,10 @@
+var $donutData = [];
 (function ($) {
-  "use strict"; // Start of use strict
+  // "use strict"; // Start of use strict
  
   // morris donut charts
   if($("#donutMorris").length == 1){
-   var $donutData = [
+    $donutData = [
     { label: "Principal", value: 200000 },
     { label: "Interest", value: 50000 },
   ];
@@ -18,3 +19,4 @@
   } 
   
 })(jQuery);
+
