@@ -1,8 +1,5 @@
 // JS dragon group added
 
-/* Wired up Input Variables */
-
-
 // not working yet
 function calcMonthlyPayment() {
     var inputLoanAmount = parseInt(document.getElementById("amount").value);
