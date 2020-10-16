@@ -630,7 +630,7 @@ h2.section-heading::before{
     content: "";
     width: 50px;
     height: 5px;
-    background-color: #84BD5A;
+    background-color: #03380d;
     bottom: -10px;
     border-radius: 5px;
 }
