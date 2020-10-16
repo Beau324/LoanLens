@@ -1,8 +1,5 @@
 // JS dragon group added
 
-/* Wired up Input Variables */
-
-
 // not working yet
 function calcMonthlyPayment() {
     var inputLoanAmount = parseInt(document.getElementById("amount").value);
@@ -17,5 +14,8 @@ function calcMonthlyPayment() {
     document.getElementById("emi").innerHTML = `<h5>${emi.toFixed(0)}</h5>`;
     document.getElementById("tInterest").innerHTML = `<h5>${tInterest}</h5>`;
     document.getElementById("tPayment").innerHTML = `<h5>${tPayment}</h5>`;
-//    donutData.setData([{ "Principal": inputLoanAmount.value},{ "Interest": "2006"}]);
+
+    // Donut update
+    $donutData = [{ label: "Principal", value: inputLoanAmount }, { label: "Interest", value: tInterest }];
+    donut.setData($donutData);
 } 
