@@ -6,7 +6,7 @@ const inputInterestRate = document.getElementById("interest");
 const inputLoanTenure = document.getElementById("tenure");
 
 
-// jquery allowing for real time updates as use types, need input validation though
+// jquery allowing for real time updates I think
 // $( "#amount" ).keyup(function() {
 //   alert( "Handler for .keyup() called." );
 // });
