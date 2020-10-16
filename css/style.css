@@ -335,7 +335,7 @@ html .ui-button.ui-state-disabled:active {
 	color: #322153;
 }
 .emi-details-box {
-    padding: 3px 3px;
+    padding: 15px 15px;
     border-bottom: 1px solid #ddd;
 }
 .emi-details-box h5{
@@ -727,7 +727,7 @@ p.section-para {
 		align-items: start;
 	}
 	.calculator-section, .services-section, .blog-section, .reviews-section, .contact-section{
-		padding: 75px 0;
+		padding: 50px 0;
 	}
 }
 
@@ -760,7 +760,7 @@ p.section-para {
 		align-items: start;
 	}
 	.calculator-section, .services-section, .blog-section, .reviews-section, .contact-section{
-		padding: 60px 0;
+		padding: 15px 0;
 	}
 	p.section-para{
 		width: 100%;

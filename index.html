@@ -102,156 +102,146 @@
                             <div id="slider-tenure" class="emi-input"></div>
                         </div>
                     </form>
+
                     <!--button-->
 
-                    <div class="row">
-                        <div class="col-12">
                     <button id="calc" class="btn btn-dark" onclick="calcMonthlyPayment()">Calculate</button>
 
-                        </div>
-                        </div>
 
+                    <div class="row">
+                        <div class="container">
+                            <div class="cols">
+                                <div class="emi-details">
+                                    <div class="emi-details-head">
+                                        <h3>Loan Details</h3>
+                                    </div>
+                                    <div class="emi-details-box">
+                                        <p>Estimated Monthly Bill</p>
+                                        <span id="emi"></span>
+                                    </div>
+                                    <div class="emi-details-box">
+                                        <p>Total Interest Due</p>
+                                        <span id="tInterest"></span>
+                                    </div>
+                                    <div class="emi-details-box no-bottom-border">
+                                        <p>Total Payment</p>
+                                        <span id="tPayment"></span>
+                                    </div>
+                                </div>
 
-
-        <div class="container">
-            
-                <div class="col">
-                    <div class="emi-details">
-                        <div class="emi-details-head">
-                            <h3>Loan Details</h3>
-                        </div>
-                        <div class="emi-details-box">
-                            <p>Estimated Monthly Bill</p>
-                            <span id="emi"></span>
-                        </div>
-                        <div class="emi-details-box">
-                            <p>Total Interest Due</p>
-                            <span id="tInterest"></span>
-                        </div>
-                        <div class="emi-details-box no-bottom-border">
-                            <p>Total Payment</p>
-                            <span id="tPayment"></span>
-                            <br/>
+                            </div>
                         </div>
                     </div>
-            
+
+
+
                 </div>
-        </div>
-                   
+                <div class="row">
+                    <div class="col">
+                        <div class="pie-chart">
+                            <div id="donutMorris"></div>
+                            <span class="chart-principal"> Principal Amount</span>
+                            <span class="chart-interest"> Interest Amount</span>
+                        </div>
+                        <br />
+                        <br />
+                        <!--Table-->
+                        
+                            <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
-                    
-                  
+                                <table class="table table-bordered table-striped mb-0" id="results">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Months</th>
+                                            <th scope="col">Payment</th>
+                                            <th scope="col">Principal</th>
+                                            <th scope="col">Interest</th>
+                                            <th scope="col">Total Interest</th>
+                                            <th scope="col">Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
 
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                
-                </div>
-            <div class="row">
-                <div class="col">
-                    <div class="pie-chart">
-                        <div id="donutMorris"></div>
-                        <span class="chart-principal"> Principal Amount</span>
-                        <span class="chart-interest"> Interest Amount</span>
+                            </div>
+                        
+
                     </div>
-                    <br />
-                    <br />
-            <!--Table-->
-            <div class="col">
-
-                <div class="table-wrapper-scroll-y my-custom-scrollbar">
-
-                    <table class="table table-bordered table-striped mb-0" id="results">
-                        <thead>
-                            <tr>
-                                <th scope="col">Months</th>
-                                <th scope="col">Payment</th>
-                                <th scope="col">Principal</th>
-                                <th scope="col">Interest</th>
-                                <th scope="col">Total Interest</th>
-                                <th scope="col">Balance</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">8</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
 
                 </div>
-            </div>
-
-                </div>
-
-            </div>
             </div>
         </div>
-            <br />
-            
 
 
-         
-            
+
+
+
+
 
 
     </section>
