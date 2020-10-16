@@ -21,5 +21,11 @@ p{
 
 .table-wrapper-scroll-y {
     display: block;
+    
+}
+
+#calc {
+    display: block;
+    width: 100%;
 }
 
