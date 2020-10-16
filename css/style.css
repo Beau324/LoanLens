@@ -176,7 +176,7 @@ section {
 }
 
 .menu-navbar-nav {
-	width: %;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 }
@@ -335,13 +335,13 @@ html .ui-button.ui-state-disabled:active {
 	color: #322153;
 }
 .emi-details-box {
-    padding: 20px;
+    padding: 19px;
     border-bottom: 1px solid #ddd;
 }
 .emi-details-box h5{
 	color: #322153;
 	font-weight: bold;	
-	font-size: 31px;
+	font-size: 15px;
 }
 .no-bottom-border{
 	border-bottom: none;
