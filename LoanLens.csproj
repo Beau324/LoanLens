@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\owl.carousel.min.css" />
