@@ -101,6 +101,8 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom-morris.js" />
     <Content Include="js\custom.js" />
+    <Content Include="js\group.js" />
+    <Content Include="js\input-validation.js" />
     <Content Include="js\jquery-min.js" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\morris.min.js" />
