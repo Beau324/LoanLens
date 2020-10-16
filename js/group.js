@@ -19,6 +19,43 @@ function calcMonthlyPayment() {
     $donutData = [{ label: "Principal", value: inputLoanAmount }, { label: "Interest", value: tInterest }];
     donut.setData($donutData);
 
-    // loop rows out
+    //builds nested array
+    
+        totalInterest = 0;
+        balance = inputLoanAmount.value;
 
+        var arr = new Array();
+    for (i = 0; i < inputLoanTenure.value; i++) {
+        totalInterest += (balance * (monthly));
+        arr[i] = new Array();
+        arr[i][0] = i + 1;
+        arr[i][1] = emi;
+        arr[i][2] = emi - (balance * (monthly));
+        arr[i][3] = balance * (monthly);
+        arr[i][4] = totalInterest;
+        arr[i][5] = (balance - emi);
+        balance -= emi;
+        console.log(arr[i][0]);
+        console.log(arr[i][1]);
+        console.log(arr[i][2]);
+        console.log(arr[i][3]);
+        console.log(arr[i][4]);
+        console.log(arr[i][5]);
+    }
+   
+
+
+
+    //builds table
+    
+        var tableRef = document.getElementById("results").getElementsByTagName("tbody")[0];
+        for (let j = 0; tableRef.rows.length > 0; j++) {
+            tableRef.deleteRow(-1);
+        }
+        for (let k = 0; k < inputLoanTenure.value; k++) {
+            let newRow = tableRef.insertRow();
+            var myHTML = `<td> + ${arr[k][0]} + </td><td> + ${arr[k][1]} + </td><td> + ${arr[k][2]} + </td><td> + ${arr[k][3]} + </td><td> + ${arr[k][4]} + </td><td> + ${arr[k][5]} + </td>`;
+            newRow.innerHTML = myHTML;
+        }
+ 
 } 
