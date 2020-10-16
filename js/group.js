@@ -14,5 +14,9 @@ function calcMonthlyPayment() {
     document.getElementById("emi").innerHTML = `<h5>${emi.toFixed(0)}</h5>`;
     document.getElementById("tInterest").innerHTML = `<h5>${tInterest}</h5>`;
     document.getElementById("tPayment").innerHTML = `<h5>${tPayment}</h5>`;
+
+    // END OF BEAU'S STUFF
+    $donutData = [{ label: "Principal", value: inputLoanAmount }, { label: "Interest", value: tInterest }];
+    donut.setData($donutData);
 //    donutData.setData([{ "Principal": inputLoanAmount.value},{ "Interest": "2006"}]);
 } 

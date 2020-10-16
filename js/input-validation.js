@@ -1,6 +1,6 @@
 const inputLoanAmount = document.getElementById("amount");
-const inputLoanAmount = document.getElementById("interest");
-const inputLoanAmount = document.getElementById("tenure");
+const inputInterestRate = document.getElementById("interest");
+const inputLoanTenure = document.getElementById("tenure");
 
 inputLoanAmount.addEventListener("input", () => {
     value = inputLoanAmount.value;
