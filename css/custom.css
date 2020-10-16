@@ -9,3 +9,11 @@ p.section-para {
 p{
     color: black;
 }
+
+table, th, td{
+    background-color: #cdfaae;
+    border: 2px solid #094615;
+    outline-color: #315736;
+    
+}
+
