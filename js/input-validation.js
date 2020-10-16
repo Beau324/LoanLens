@@ -1,4 +1,6 @@
-// input variables references from group.js
+const inputLoanAmount = document.getElementById("amount");
+const inputLoanAmount = document.getElementById("interest");
+const inputLoanAmount = document.getElementById("tenure");
 
 inputLoanAmount.addEventListener("input", () => {
     value = inputLoanAmount.value;
