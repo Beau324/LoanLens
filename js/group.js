@@ -18,4 +18,7 @@ function calcMonthlyPayment() {
     // Donut update
     $donutData = [{ label: "Principal", value: inputLoanAmount }, { label: "Interest", value: tInterest }];
     donut.setData($donutData);
+
+    // loop rows out
+
 } 
