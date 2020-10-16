@@ -71,7 +71,7 @@
                     <form class="form-calculator">
                         <div class="form-group">
                             <label for="amount">Loan Amount:</label>
-                            <div class="input-group mb-4">
+                            <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">$</div>
                                 </div>
@@ -82,7 +82,7 @@
 
                         <div class="form-group">
                             <label for="amount">Interest Rate :</label>
-                            <div class="input-group mb-4">
+                            <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">%</div>
                                 </div>
@@ -93,7 +93,7 @@
 
                         <div class="form-group">
                             <label for="amount">Loan Tenure :</label>
-                            <div class="input-group mb-4">
+                            <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">Months</div>
                                 </div>
@@ -101,24 +101,12 @@
                             </div>
                             <div id="slider-tenure" class="emi-input"></div>
                         </div>
+                    <!--button-->
+                    <button id="calc" class="btn btn-dark" onclick="calcMonthlyPayment()">Calculate</button>
                     </form>
-                    <br />
-                </div>
-            <div class="row">
-                <div class="col">
-                    <div class="pie-chart">
-                        <div id="donutMorris"></div>
-                        <span class="chart-principal"> Principal Amount</span>
-                        <span class="chart-interest"> Interest Amount</span>
-                    </div>
-                </div>
-
-            </div>
-            </div>
-        </div>
         <div class="container">
             
-                <div class="col-12">
+                <div class="col">
                     <div class="emi-details">
                         <div class="emi-details-head">
                             <h3>Loan Details</h3>
@@ -135,15 +123,28 @@
                             <p>Total Payment</p>
                             <span id="tPayment"></span>
                             <br/>
-                    <!--button-->
-                    <button id="calc" class="btn btn-dark" onclick="calcMonthlyPayment()">Calculate</button>
                         </div>
                     </div>
             
-
+                </div>
         </div>
-            <br />
-            <br />
+                   
+
+                    
+                  
+
+
+                
+                </div>
+            <div class="row">
+                <div class="col">
+                    <div class="pie-chart">
+                        <div id="donutMorris"></div>
+                        <span class="chart-principal"> Principal Amount</span>
+                        <span class="chart-interest"> Interest Amount</span>
+                    </div>
+                    <br />
+                    <br />
             <!--Table-->
             <div class="col">
 
@@ -231,9 +232,16 @@
                 </div>
             </div>
 
+                </div>
+
+            </div>
+            </div>
+        </div>
+            <br />
+            
 
 
-           </div>
+         
             
 
 
