@@ -335,7 +335,7 @@ html .ui-button.ui-state-disabled:active {
 	color: #322153;
 }
 .emi-details-box {
-    padding: 19px;
+    padding: 3px 3px;
     border-bottom: 1px solid #ddd;
 }
 .emi-details-box h5{
