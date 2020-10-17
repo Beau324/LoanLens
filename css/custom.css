@@ -17,11 +17,12 @@ p{
     position: relative;
     height: 200px;
     overflow: auto;
+ 
 }
 
 .table-wrapper-scroll-y {
     display: block;
-    
+   
 }
 
 #calc {
@@ -31,7 +32,7 @@ p{
 
 .table{
 
-    max-height: 100px;
+   
     
     background-color: white;
 }
