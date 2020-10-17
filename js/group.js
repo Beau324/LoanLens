@@ -29,7 +29,7 @@ function calcMonthlyPayment() {
         totalInterest += parseFloat(balance * (monthly));
         arr[i] = new Array();
         arr[i][0] = i + 1;
-        arr[i][1] = parseFloat(emi);
+        arr[i][1] = parseFloat(emi).toFixed(2);
         arr[i][2] = parseFloat(emi - (balance * (monthly)));
         arr[i][3] = parseFloat(balance * (monthly));
         arr[i][4] = parseFloat(totalInterest);
@@ -54,7 +54,7 @@ function calcMonthlyPayment() {
         }
     for (let k = 0; k < inputLoanTenure; k++) {
             let newRow = tableRef.insertRow();
-        var myHTML = `<td>${parseFloat(arr[k][0])}</td><td>${parseFloat(arr[k][1])}</td><td>${parseFloat(arr[k][2])}</td><td>${parseFloat(arr[k][3])}</td><td>${parseFloat(arr[k][4])}</td><td>${parseFloat(arr[k][5])}</td>`;
+        var myHTML = `<td>${(arr[k][0])}</td><td>${(arr[k][1])}</td><td>${(arr[k][2])}</td><td>${(arr[k][3])}</td><td>${(arr[k][4])}</td><td>${(arr[k][5])}</td>`;
             newRow.innerHTML = myHTML;
         }
  
