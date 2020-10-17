@@ -29,3 +29,8 @@ p{
     width: 100%;
 }
 
+.table{
+    max-height: 100px;
+    
+    background-color: white;
+}
