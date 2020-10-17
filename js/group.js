@@ -34,7 +34,12 @@ function calcMonthlyPayment() {
         arr[i][3] = parseFloat(balance * (monthly)).toFixed(2);
         arr[i][4] = parseFloat(totalInterest).toFixed(2);
         arr[i][5] = parseFloat(balance - emi).toFixed(2);
+        if (emi > balance) {
+            arr[i][1] = arr[i - 1][5];
+            arr[i][5] = 0.00;
+        }
         balance -= parseFloat(emi).toFixed(2);
+        
         
     }
    
@@ -45,7 +50,6 @@ function calcMonthlyPayment() {
     console.log(arr[0][3]);
     console.log(arr[0][4]);
     console.log(arr[0][5]);
-
     //builds table
     
         var tableRef = document.getElementById("results").getElementsByTagName("tbody")[0];
