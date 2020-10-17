@@ -28,13 +28,13 @@ function calcMonthlyPayment() {
     for (i = 0; i < inputLoanTenure; i++) {
         totalInterest += parseFloat(balance * (monthly));
         arr[i] = new Array();
-        arr[i][0] = i + 1;
+        arr[i][0] = (i + 1).toFixed(0);
         arr[i][1] = parseFloat(emi).toFixed(2);
-        arr[i][2] = parseFloat(emi - (balance * (monthly)));
-        arr[i][3] = parseFloat(balance * (monthly));
-        arr[i][4] = parseFloat(totalInterest);
-        arr[i][5] = parseFloat(balance - emi);
-        balance -= parseFloat(emi);
+        arr[i][2] = parseFloat(emi - (balance * (monthly))).toFixed(2);
+        arr[i][3] = parseFloat(balance * (monthly)).toFixed(2);
+        arr[i][4] = parseFloat(totalInterest).toFixed(2);
+        arr[i][5] = parseFloat(balance - emi).toFixed(2);
+        balance -= parseFloat(emi).toFixed(2);
         
     }
    
