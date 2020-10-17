@@ -22,7 +22,7 @@ function calcMonthlyPayment() {
     //builds nested array
     
         var totalInterest = 0.0;
-        var balance = parseFloat(inputLoanAmount).value;
+        var balance = parseFloat(inputLoanAmount);
 
         var arr = new Array();
     for (i = 0; i < inputLoanTenure; i++) {
