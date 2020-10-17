@@ -25,7 +25,7 @@ function calcMonthlyPayment() {
         var balance = parseFloat(inputLoanAmount);
 
         var arr = new Array();
-    for (i = 0; i < inputLoanTenure; i++) {
+    for (i = 0; i < inputLoanTenure && balance > 0; i++) {
         totalInterest += parseFloat(balance * (monthly));
         arr[i] = new Array();
         arr[i][0] = (i + 1).toFixed(0);
