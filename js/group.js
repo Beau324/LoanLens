@@ -36,6 +36,7 @@ function calcMonthlyPayment() {
         arr[i][5] = parseFloat(balance - emi).toFixed(2);
         if (emi > balance) {
             arr[i][1] = arr[i - 1][5];
+            arr[i][2] = arr[i][1] - arr[i][3];
             arr[i][5] = 0.00;
         }
         balance -= parseFloat(emi).toFixed(2);
