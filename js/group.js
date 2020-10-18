@@ -22,16 +22,21 @@ function calcMonthlyPayment() {
     //builds nested array
     
         var totalInterest = 0.0;
-        var balance = parseFloat(tPayment);
+        var balance = parseFloat(inputLoanAmount);
+        let monthlyInterest = 0.0;
+        let monthlyPrincipal = 0.0;
 
         var arr = new Array();
     for (i = 0; i < inputLoanTenure && balance > 0; i++) {
         totalInterest += parseFloat(balance * (monthly));
+        // Interest Payment = Previous Remaining Balance * rate/1200
+        monthlyInterest = balance * monthly;
+        monthlyPrincipal = emi - monthlyInterest;
         arr[i] = new Array();
         arr[i][0] = (i + 1).toFixed(0);
         arr[i][1] = parseFloat(emi).toFixed(2);
-        arr[i][2] = parseFloat(emi - (balance * (monthly))).toFixed(2);
-        arr[i][3] = parseFloat(balance * (monthly)).toFixed(2);
+        arr[i][2] = parseFloat(monthlyPrincipal).toFixed(2);
+        arr[i][3] = parseFloat(monthlyInterest).toFixed(2);
         arr[i][4] = parseFloat(totalInterest).toFixed(2);
         arr[i][5] = parseFloat(balance - emi).toFixed(2);
         if (emi > balance) {
@@ -40,7 +45,7 @@ function calcMonthlyPayment() {
             arr[i][5] = 0.00;
         }
         
-        balance -= parseFloat(emi);
+        balance -= monthlyPrincipal;
     }
    
 
