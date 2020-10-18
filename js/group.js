@@ -2,27 +2,27 @@
 
 // not working yet
 function calcMonthlyPayment() {
-    var inputLoanAmount = parseInt(document.getElementById("amount").value);
+    var inputLoanAmount = parseFloat(document.getElementById("amount").value);
     var inputInterestRate = parseFloat(document.getElementById("interest").value);
-    var inputLoanTenure = parseInt(document.getElementById("tenure").value);
+    var inputLoanTenure = parseFloat(document.getElementById("tenure").value);
 
     let monthly = inputInterestRate / 1200.0;
     let annual = inputInterestRate / 100.0;
-    let emi = inputLoanAmount * monthly * (Math.pow(1 + monthly, inputLoanTenure)) / (Math.pow(1 + monthly, inputLoanTenure) - 1);
-    let tInterest = inputLoanAmount * annual;
+    const emi = (inputLoanAmount * monthly) / (1.0 - Math.pow(1.0 + monthly, parseInt(inputLoanTenure * -1)));
+    let tInterest = emi * inputLoanTenure - inputLoanAmount;
     let tPayment = inputLoanAmount + tInterest;
-    document.getElementById("emi").innerHTML = `<h5>${emi.toFixed(0)}</h5>`;
-    document.getElementById("tInterest").innerHTML = `<h5>${tInterest}</h5>`;
-    document.getElementById("tPayment").innerHTML = `<h5>${tPayment}</h5>`;
+    document.getElementById("emi").innerHTML = `<h5>${emi.toFixed(2)}</h5>`;
+    document.getElementById("tInterest").innerHTML = `<h5>${tInterest.toFixed(2)}</h5>`;
+    document.getElementById("tPayment").innerHTML = `<h5>${tPayment.toFixed(2)}</h5>`;
 
     // Donut update
-    $donutData = [{ label: "Principal", value: inputLoanAmount }, { label: "Interest", value: tInterest }];
+    $donutData = [{ label: "Principal", value: inputLoanAmount.toFixed(0) }, { label: "Interest", value: tInterest.toFixed(0) }];
     donut.setData($donutData);
 
     //builds nested array
     
         var totalInterest = 0.0;
-        var balance = parseFloat(inputLoanAmount);
+        var balance = parseFloat(tPayment);
 
         var arr = new Array();
     for (i = 0; i < inputLoanTenure && balance > 0; i++) {
