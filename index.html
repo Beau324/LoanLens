@@ -66,83 +66,82 @@
                     <p class="section-para">LoanLens is a mortgage loan calculator that helps you visualize your estimated monthly bill. It includes the principal and interest so you get a quick and digestible view of your future liability. Update your loan amount, interest rate, and loan tenure for your customized results.</p>
                 </div>
             </div>
-       
-        <!--new container for information -->
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <form class="form-calculator">
-                        <div class="form-group">
-                            <label for="amount">Loan Amount:</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">$</div>
+
+            <!--new container for information -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form class="form-calculator">
+                            <div class="form-group">
+                                <label for="amount">Loan Amount:</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">$</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="amount" value="200000">
                                 </div>
-                                <input type="number" class="form-control" id="amount" value="200000">
+                                <div id="slider" class="emi-input"></div>
                             </div>
-                            <div id="slider" class="emi-input"></div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="amount">Interest Rate :</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">%</div>
+                            <div class="form-group">
+                                <label for="amount">Interest Rate :</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">%</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="interest" value="10.5">
                                 </div>
-                                <input type="number" class="form-control" id="interest" value="10.5">
+                                <div id="slider-interest" class="emi-input"></div>
                             </div>
-                            <div id="slider-interest" class="emi-input"></div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="amount">Loan Tenure :</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">Months</div>
+                            <div class="form-group">
+                                <label for="amount">Loan Tenure :</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Months</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="tenure" value="12">
                                 </div>
-                                <input type="number" class="form-control" id="tenure" value="12">
+                                <div id="slider-tenure" class="emi-input"></div>
                             </div>
-                            <div id="slider-tenure" class="emi-input"></div>
-                        </div>
-                    </form>
+                        </form>
 
-                    <!--button-->
-                    <button id="calc" class="btn btn-dark " onclick="calcMonthlyPayment()">Calculate</button>
-
-
-                </div>
-                <div class="col">
-                    <div class="pie-chart">
-                        <div id="donutMorris"></div>
-                        <span class="chart-principal"> Principal Amount</span>
-                        <span class="chart-interest"> Interest Amount</span>
-
+                        <!--button-->
+                        <button id="calc" class="btn btn-dark " onclick="calcMonthlyPayment()">Calculate</button>
                     </div>
-                </div>
-                <!---->
-                
-                    <div class="emi-details">
-                        <div class="emi-details-head">
-                            <h3>Loan Details</h3>
-                        </div>
-                        <div class="emi-details-box">
-                            <p>Estimated Monthly Bill</p>
-                            <span id="emi"></span>
-                        </div>
-                        <div class="emi-details-box">
-                            <p>Total Interest Due</p>
-                            <span id="tInterest"></span>
-                        </div>
-                        <div class="emi-details-box no-bottom-border">
-                            <p>Total Payment</p>
-                            <span id="tPayment"></span>
+
+
+
+                    <div class="col">
+                        <div class="pie-chart">
+                            <div id="donutMorris"></div>
+                            <span class="chart-principal"> Principal Amount</span>
+                            <span class="chart-interest"> Interest Amount</span>
+
                         </div>
                     </div>
-               
 
+                       
+                        <div class="emi-details">
+                            <div class="emi-details-head">
+                                <h3>Loan Details</h3>
+                            </div>
+                            <div class="emi-details-box">
+                                <p>Estimated Monthly Bill</p>
+                                <span id="emi"></span>
+                            </div>
+                            <div class="emi-details-box">
+                                <p>Total Interest Due</p>
+                                <span id="tInterest"></span>
+                            </div>
+                            <div class="emi-details-box no-bottom-border">
+                                <p>Total Payment</p>
+                                <span id="tPayment"></span>
+                            </div>
+                        </div>
 
-
-            </div>
+                        
+                </div>
 
 
 
@@ -237,6 +236,21 @@
                 </div>
 
             </div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
     </section>
