@@ -39,9 +39,8 @@ function calcMonthlyPayment() {
             arr[i][2] = arr[i][1] - arr[i][3];
             arr[i][5] = 0.00;
         }
-        balance -= parseFloat(emi).toFixed(2);
         
-        
+        balance -= parseFloat(emi);
     }
    
 
