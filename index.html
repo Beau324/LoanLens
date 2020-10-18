@@ -66,8 +66,11 @@
                     <p class="section-para">LoanLens is a mortgage loan calculator that helps you visualize your estimated monthly bill. It includes the principal and interest so you get a quick and digestible view of your future liability. Update your loan amount, interest rate, and loan tenure for your customized results.</p>
                 </div>
             </div>
+       
+        <!--new container for information -->
+        <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col">
                     <form class="form-calculator">
                         <div class="form-group">
                             <label for="amount">Loan Amount:</label>
@@ -104,36 +107,10 @@
                     </form>
 
                     <!--button-->
-
                     <button id="calc" class="btn btn-dark " onclick="calcMonthlyPayment()">Calculate</button>
 
 
-                    
-                    <div class="row">
-                        <div class="container">
-                            <div class="cols">
-                                <div class="emi-details">
-                                    <div class="emi-details-head">
-                                        <h3>Loan Details</h3>
-                                    </div>
-                                    <div class="emi-details-box">
-                                        <p>Estimated Monthly Bill</p>
-                                        <span id="emi"></span>
-                                    </div>
-                                    <div class="emi-details-box">
-                                        <p>Total Interest Due</p>
-                                        <span id="tInterest"></span>
-                                    </div>
-                                    <div class="emi-details-box no-bottom-border">
-                                        <p>Total Payment</p>
-                                        <span id="tPayment"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
                 <div class="col">
                     <div class="pie-chart">
                         <div id="donutMorris"></div>
@@ -141,122 +118,147 @@
                         <span class="chart-interest"> Interest Amount</span>
 
                     </div>
-
-
-                
-
-
-                    <br />
-                  
-                   
-                <div class="row">
-                    <div class="container">
-                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                        <table class="table table-bordered table-striped mb-0" id="results">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Months</th>
-                                    <th scope="col">Payment</th>
-                                    <th scope="col">Principal</th>
-                                    <th scope="col">Interest</th>
-                                    <th scope="col">Total Interest</th>
-                                    <th scope="col">Balance</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-                    </div>
-
                 </div>
-
-                <div></div>
-
-
-
-</div>
+                <!---->
+                
+                    <div class="emi-details">
+                        <div class="emi-details-head">
+                            <h3>Loan Details</h3>
+                        </div>
+                        <div class="emi-details-box">
+                            <p>Estimated Monthly Bill</p>
+                            <span id="emi"></span>
+                        </div>
+                        <div class="emi-details-box">
+                            <p>Total Interest Due</p>
+                            <span id="tInterest"></span>
+                        </div>
+                        <div class="emi-details-box no-bottom-border">
+                            <p>Total Payment</p>
+                            <span id="tPayment"></span>
+                        </div>
                     </div>
+               
+
 
 
             </div>
-            
-     </div>
-
-
-       
-       <!-- Table-->
 
 
 
+
+            </div>
+            <br />
+            <br />
+
+            <div class="col">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <table class="table table-bordered table-striped mb-0" id="results">
+                        <thead>
+                            <tr>
+                                <th scope="col">Months</th>
+                                <th scope="col">Payment</th>
+                                <th scope="col">Principal</th>
+                                <th scope="col">Interest</th>
+                                <th scope="col">Total Interest</th>
+                                <th scope="col">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">8</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </div>
+        </div>
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- calculator End -->
     <!-- contact Start -- for later use -->
     <!-- <section id="contact" class="contact-section mt-5">
