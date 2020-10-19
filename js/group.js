@@ -66,14 +66,8 @@ function calcMonthlyPayment() {
     }
    
 
-    console.log(arr[0][0]);
-    console.log(arr[0][1]);
-    console.log(arr[0][2]);
-    console.log(arr[0][3]);
-    console.log(arr[0][4]);
-    console.log(arr[0][5]);
-    //builds table
-    
+
+        //builds table
         var tableRef = document.getElementById("results").getElementsByTagName("tbody")[0];
         for (let j = 0; tableRef.rows.length > 0; j++) {
             tableRef.deleteRow(-1);
