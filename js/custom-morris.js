@@ -1,5 +1,5 @@
-var $donutData = [{ label: "Principal", value: 200000 }, { label: "Interest", value: 11557 }];
-var donut = {};
+let $donutData = [{ label: "Principal", value: 200000 }, { label: "Interest", value: 11557 }];
+let donut = {};
 (function ($) {
     // "use strict"; // Start of use strict
 

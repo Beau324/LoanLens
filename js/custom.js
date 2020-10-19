@@ -48,7 +48,8 @@ $(function () {
     /*------------------------------------------------------------------
        Calculator 
     ------------------------------------------------------------------*/
-    var slider = $("#slider").slider({
+    // Principal Slider
+    const slider = $("#slider").slider({
         range: "min",
         value: 200000,
         min: 1000,
@@ -63,22 +64,8 @@ $(function () {
 });
 
 $(function () {
-    var slider = $("#slider-tenure").slider({
-        range: "min",
-        value: 12,
-        min: 12,
-        max: 360,
-        slide: function (event, ui) {
-            $("#tenure").val(ui.value);
-        }
-    });
-    $("#tenure").on("change", function () {
-        slider.slider("value", this.value + 3);
-    });
-});
-
-$(function () {
-    var slider = $("#slider-interest").slider({
+    // Interest Slider
+    const slider = $("#slider-interest").slider({
         range: "min",
         value: 10.5,
         min: 0.0,
@@ -89,6 +76,22 @@ $(function () {
     });
     $("#interest").on("change", function () {
         slider.slider("value", this.value + 0.5);
+    });
+});
+
+$(function () {
+    // Tenure Slider
+    const slider = $("#slider-tenure").slider({
+        range: "min",
+        value: 12,
+        min: 12,
+        max: 360,
+        slide: function (event, ui) {
+            $("#tenure").val(ui.value);
+        }
+    });
+    $("#tenure").on("change", function () {
+        slider.slider("value", this.value + 3);
     });
 });
 
