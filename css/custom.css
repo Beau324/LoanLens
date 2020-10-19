@@ -31,7 +31,10 @@ p{
     width: 100%;
     padding: 8px;
 }
-
+.th{
+    background-color: white;
+    border:thin;
+}
 .table {
   
     background-color: white;
