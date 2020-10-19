@@ -73,6 +73,7 @@
     <Content Include="css\custom.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\jquery-ui.css" />
+    <Content Include="css\local.reset.css" />
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\plugins.css" />
     <Content Include="css\prism.css" />

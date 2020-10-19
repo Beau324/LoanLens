@@ -1,1 +1,5 @@
 /* CSS dragon group added */
+
+section {
+  min-height: 100vh;
+}

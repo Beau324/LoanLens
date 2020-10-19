@@ -1,47 +1,52 @@
 ﻿section {
-    background-image: linear-gradient(to right, #cdfaae, #a0d874, #66ba6b, #579f5c, #396d3d, #315736);
+  background-image: linear-gradient(
+    to right,
+    #cdfaae,
+    #a0d874,
+    #66ba6b,
+    #579f5c,
+    #396d3d,
+    #315736
+  );
 }
 .background {
-    background-image: linear-gradient(to right, #cdfaae, #a0d874, #66ba6b, #579f5c, #396d3d, #315736);
+  background-image: linear-gradient(
+    to right,
+    #cdfaae,
+    #a0d874,
+    #66ba6b,
+    #579f5c,
+    #396d3d,
+    #315736
+  );
 }
 p.section-para {
-    color: white;
+  color: white;
 }
 
-p{
-    color: black;
+p {
+  color: black;
 }
-
-
 
 .my-custom-scrollbar {
-    position: relative;
-    height: 320px;
-    overflow: auto;
- 
+  position: relative;
+  height: 320px;
+  overflow: auto;
 }
 
 .table-wrapper-scroll-y {
-    display: block;
-  
+  display: block;
 }
 
 #calc {
-    display: block;
-    width: 100%;
-    padding: 8px;
+  display: block;
+  width: 100%;
+  padding: 8px;
 }
-.th{
-    background-color: white;
-    border:thin;
+.th {
+  background-color: white;
+  border: thin;
 }
 .table {
-  
-    background-color: white;
+  background-color: white;
 }
-
-
-
-
-
-
