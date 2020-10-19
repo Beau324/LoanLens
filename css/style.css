@@ -359,7 +359,7 @@ html .ui-button.ui-state-disabled:active {
 	color: #999999;
 	margin-left: 20px;
 }
-.chart-principal::before{
+.chart-interest::before{
 	content: "";
 	width: 10px;
 	height: 10px;
@@ -368,7 +368,7 @@ html .ui-button.ui-state-disabled:active {
 	top: 3px;
     left: -14px;
 }
-.chart-interest::before{
+.chart-principal::before{
 	content: "";
 	width: 10px;
 	height: 10px;
