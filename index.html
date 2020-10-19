@@ -18,6 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/icons8-monocle-50.png">
     <link rel="stylesheet" href="css/group.css">
     <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/prism (1).css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,25 +43,23 @@
                 </a>
             </div>
             <!-- for later user -->
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link learn-more-btn">Code</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link learn-more-btn" href="#contact">Contact</a>
-                </li>
-                  <!--<li class="nav-item">
-                      <a class="nav-link" herf="//github.com/Beau324/LoanLens">
-                          <img src="//img.icons8.com/windows/50/000000/github-squared.png" alt="" /> to the github repo
-                      </a>
-                  </li>-->
-              </ul>
-            </div> 
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Git Hub</a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </nav>
@@ -71,8 +70,10 @@
             <div class="row">
                 <div class="col">
                     <h2 class="section-heading">Loan Calculator</h2>
-                    <p class="section-para">LoanLens is a mortgage loan calculator that helps you visualize your estimated monthly bill. It includes the principal and interest so you get a 
-                    quick and digestible view of your future liability. Update your loan amount, interest rate, and loan tenure for your customized results.</p>
+                    <p class="section-para">
+                        LoanLens is a mortgage loan calculator that helps you visualize your estimated monthly bill. It includes the principal and interest so you get a
+                        quick and digestible view of your future liability. Update your loan amount, interest rate, and loan tenure for your customized results.
+                    </p>
                 </div>
             </div>
 
@@ -116,7 +117,7 @@
                         </form>
 
                         <!--button-->
-                        <button id="calc" class="btn btn-dark"  onclick="calcMonthlyPayment()">Calculate</button>
+                        <button id="calc" class="btn btn-dark" onclick="calcMonthlyPayment()">Calculate</button>
                     </div>
 
                     <!--Pie Chart-->
@@ -238,10 +239,83 @@
                     </table>
                 </div>
             </div>
-    </div>
-</section>
-    <!-- calculator End -->
+        </div>
+    </section>
 
+    <!--<section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(Images/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-mf">
+                        <div id="contact" class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Send Message Us
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <form id="form" role="form">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                                        <div class="validate"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                                        <div class="validate"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                                        <div class="validate"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                                        <div class="validate"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12 text-center">
+                                                    <button id="button" type="submit" class="button button-a button-big btn-dark">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="title-box-2 pt-4 pt-md-0">
+                                        <h5 class="title-left">
+                                            Get in Touch
+                                        </h5>
+                                    </div>
+                                    <div class="more-info">
+                                        <p class="lead">
+                                            If you liked what was presented, consider hiring me by writing a message and we can schedule a meeting to discuss things more in depth and answer and questions that concern you.
+                                        </p>
+                                        <ul>
+                                            <li><a href="//github.com/Beau324/LoanLens" target="_blank"><img src="//img.icons8.com/windows/70/000000/github-squared.png" alt="" /></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+
+    <!-- calculator End -->
     <!-- contact Start -- for later use -->
     <!-- <section id="contact" class="contact-section mt-5">
       <div class="container justify-content-center">
@@ -309,7 +383,6 @@
         </div>
     </section> -->
     <!-- footer End -->
-
     <!-- jQuery Min JS -->
     <script src="js/jquery-min.js"></script>
     <script src="js/jquery-ui.js"></script>
@@ -339,5 +412,31 @@
     <script src="js/group.js"></script>
     <script src="js/input-validation.js"></script>
     <script src="js/group.js"></script>
+    <script src="js/prism (1).js"></script>
+    <!--emailjs Script-->
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_k4cikdf';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        alert('Sent!');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
+
+
 </body>
 </html>

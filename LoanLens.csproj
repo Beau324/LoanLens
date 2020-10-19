@@ -74,6 +74,7 @@
     <Content Include="css\jquery-ui.css" />
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\plugins.css" />
+    <Content Include="css\prism %281%29.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\fa-brands-400.svg" />
     <Content Include="fonts\fa-regular-400.svg" />
@@ -109,6 +110,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\popper.min.js" />
+    <Content Include="js\prism %281%29.js" />
     <Content Include="js\raphael-min.js" />
     <Content Include="js\smoothscroll.js" />
     <Content Include="Web.config" />
