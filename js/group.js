@@ -1,5 +1,13 @@
 // JS dragon group added
 
+//make the table hidden
+document.getElementById("tableHidden").style.display = `none`;
+
+//when calc btn is clicked activate the anonymous function and displays the table.
+document.getElementById("calc").addEventListener(`click`, function () {
+    document.getElementById("tableHidden").style.display = "block";
+});
+
 // not working yet
 function calcMonthlyPayment() {
     var inputLoanAmount = parseFloat(document.getElementById("amount").value);
