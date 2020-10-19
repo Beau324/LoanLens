@@ -1,6 +1,9 @@
 ﻿section {
     background-image: linear-gradient(to right, #cdfaae, #a0d874, #66ba6b, #579f5c, #396d3d, #315736);
 }
+.background {
+    background-image: linear-gradient(to right, #cdfaae, #a0d874, #66ba6b, #579f5c, #396d3d, #315736);
+}
 p.section-para {
     color: white;
 }
@@ -8,7 +11,6 @@ p.section-para {
 p{
     color: black;
 }
-
 
 
 

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LoanLens Code</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!--favicon-->
+
+    <link rel="shortcut icon" type="image/x-icon" href="Images/icons8-monocle-50.png" />
+
+    <link href="css/prism.css" rel="stylesheet" />
+
+    <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="background">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-brand-logo" href="#calculator">
+
+                    <img src="Images/LoanLens-PixTeller.png" alt="" />
+                </a>
+            </div>
+            <!--<a class="navbar-brand" href="/Index.html">LoanLens Code</a>-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="" target="_blank">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//loanlens.netlify.app" target="_blank">LoanLens</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">How the problem is solved.</h1>
+                <br />
+
+                <!--<ul>
+                    <li class="nav-item">
+                        <a class="btn-dark">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a>HTML</a>
+                    </li>
+                </ul>-->
+
+
+
+                <div class="col">
+<pre>
+<code class="language-js line-numbers">
+//make the table hidden
+document.getElementById("tableHidden").style.display = `none`;
+
+//when calc btn is clicked activate the anonymous function and displays the table.
+document.getElementById("calc").addEventListener(`click`, function () {
+document.getElementById("tableHidden").style.display = "block";
+});
+
+function calcMonthlyPayment() {
+var inputLoanAmount = parseFloat(document.getElementById("amount").value);
+var inputInterestRate = parseFloat(document.getElementById("interest").value);
+var inputLoanTenure = parseFloat(document.getElementById("tenure").value);
+
+let monthly = inputInterestRate / 1200.0;
+let annual = inputInterestRate / 100.0;
+const emi = (inputLoanAmount * monthly) / (1.0 - Math.pow(1.0 + monthly, parseInt(inputLoanTenure * -1)));
+let tInterest = emi * inputLoanTenure - inputLoanAmount;
+let tPayment = inputLoanAmount + tInterest;
+document.getElementById("emi").innerHTML = `<h5>${emi.toFixed(2)}</h5>`;
+document.getElementById("tInterest").innerHTML = `<h5>${tInterest.toFixed(2)}</h5>`;
+document.getElementById("tPayment").innerHTML = `<h5>${tPayment.toFixed(2)}</h5>`;
+
+// Donut update
+$donutData = [{ label: "Principal", value: inputLoanAmount.toFixed(0) }, { label: "Interest", value: tInterest.toFixed(0) }];
+donut.setData($donutData);
+
+//builds nested array
+
+var totalInterest = 0.0;
+var balance = parseFloat(inputLoanAmount);
+let monthlyInterest = 0.0;
+let monthlyPrincipal = 0.0;
+
+var arr = new Array();
+for (i = 0; i < inputLoanTenure && balance > 0; i++) {
+totalInterest += parseFloat(balance * (monthly));
+// Interest Payment = Previous Remaining Balance * rate/1200
+monthlyInterest = balance * monthly;
+monthlyPrincipal = emi - monthlyInterest;
+arr[i] = new Array();
+arr[i][0] = (i + 1).toFixed(0);
+arr[i][1] = parseFloat(emi).toFixed(2);
+arr[i][2] = parseFloat(monthlyPrincipal).toFixed(2);
+arr[i][3] = parseFloat(monthlyInterest).toFixed(2);
+arr[i][4] = parseFloat(totalInterest).toFixed(2);
+arr[i][5] = parseFloat(balance - emi).toFixed(2);
+if (emi > balance) {
+arr[i][1] = arr[i - 1][5];
+arr[i][2] = arr[i][1] - arr[i][3];
+arr[i][5] = 0.00;
+}
+
+balance -= monthlyPrincipal;
+}
+
+
+console.log(arr[0][0]);
+console.log(arr[0][1]);
+console.log(arr[0][2]);
+console.log(arr[0][3]);
+console.log(arr[0][4]);
+console.log(arr[0][5]);
+//builds table
+
+var tableRef = document.getElementById("results").getElementsByTagName("tbody")[0];
+for (let j = 0; tableRef.rows.length > 0; j++) {
+tableRef.deleteRow(-1);
+}
+for (let k = 0; k < inputLoanTenure; k++) {
+let newRow = tableRef.insertRow();
+var myHTML = `<td>${(arr[k][0])}</td><td>${(arr[k][1])}</td><td>${(arr[k][2])}</td><td>${(arr[k][3])}</td><td>${(arr[k][4])}</td><td>${(arr[k][5])}</td>`;
+newRow.innerHTML = myHTML;
+}
+
+}
+</code>
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
